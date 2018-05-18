@@ -32,7 +32,7 @@ function fromBech32 (address) {
 }
 
 function toBase58Check (hash, version) {
-	if (version < 256){
+  if (version < 256){
     typeforce(types.tuple(types.Hash160bit, types.UInt8), arguments)
 
     var payload = Buffer.allocUnsafe(21)
